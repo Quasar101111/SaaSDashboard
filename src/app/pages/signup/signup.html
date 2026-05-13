@@ -1,0 +1,49 @@
+<div class="signup-container">
+  <nz-card class="signup-card" nzTitle="Create an Account">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <!-- Username -->
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="userName">Username</nz-form-label>
+        <nz-form-control [nzSm]="18" [nzXs]="24" nzErrorTip="Please input your username!">
+          <input nz-input formControlName="userName" id="userName" placeholder="JohnDoe" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Email -->
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
+        <nz-form-control [nzSm]="18" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+          <input nz-input formControlName="email" id="email" placeholder="example@email.com" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Password -->
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="password">Password</nz-form-label>
+        <nz-form-control
+          [nzSm]="18"
+          [nzXs]="24"
+          nzErrorTip="Password must be at least 6 characters!"
+        >
+          <input nz-input type="password" formControlName="password" id="password" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Agreement -->
+      <nz-form-item>
+        <nz-form-control [nzOffset]="6" [nzSm]="18" [nzXs]="24">
+          <label nz-checkbox formControlName="agree">
+            <span>I have read the <a>agreement</a></span>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Submit Button -->
+      <nz-form-item>
+        <nz-form-control [nzOffset]="6" [nzSm]="18" [nzXs]="24">
+          <button nz-button nzType="primary" class="signup-form-button">Sign Up</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-card>
+</div>
