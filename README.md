@@ -2,7 +2,7 @@
 Dashboard for inventory management
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
 
-This project will use the styling module like primeng or material ui
+This project will use the NG-ZORRO
 
 ## Development server
 
