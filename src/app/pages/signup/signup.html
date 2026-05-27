@@ -29,6 +29,19 @@
         </nz-form-control>
       </nz-form-item>
 
+      <!--Confirm Password -->
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="confirmPassword"
+          >Confirm Password</nz-form-label
+        >
+        <nz-form-control [nzSm]="18" [nzXs]="24" nzErrorTip="Confirm password required!">
+          <input nz-input type="password" formControlName="confirmPassword" id="confirmPassword" />
+        </nz-form-control>
+      </nz-form-item>
+      <ng-template #passwordErrorTpl let-control>
+        @if (control.hasError('required')) { Confirm password is required! } @if
+        (validateForm.hasError('passwordMismatch')) { Passwords do not match! }
+      </ng-template>
       <!-- Agreement -->
       <nz-form-item>
         <nz-form-control [nzOffset]="6" [nzSm]="18" [nzXs]="24">
