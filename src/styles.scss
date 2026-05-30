@@ -1,1 +1,15 @@
-@import "tailwindcss";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #dcfcee;
+}
+
+.ant-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.ant-card-head-title {
+  text-align: center;
+  width: 100%;
+  display: block;
+}

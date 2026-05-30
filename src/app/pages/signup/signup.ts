@@ -42,10 +42,20 @@ export class Signup {
   );
 
   passwordMatchValidator(control: AbstractControl): ValidationErrors | null {
-    const password = control.get('password')?.value;
-    const confirmPassword = control.get('confirmPassword')?.value;
+    const password = control.get('password');
+    const confirmPassword = control.get('confirmPassword');
+    if (!password || !confirmPassword) {
+      return null;
+    }
 
-    return password === confirmPassword ? null : { passwordMismatch: true };
+    if (password.value !== confirmPassword.value) {
+      confirmPassword.setErrors({ mismatch: true });
+    } else {
+      if (confirmPassword.hasError('mismatch')) {
+        confirmPassword.setErrors(null);
+      }
+    }
+    return null;
   }
   submitForm(): void {
     if (this.validateForm.invalid) {

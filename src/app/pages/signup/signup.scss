@@ -1,10 +1,33 @@
 .signup-container {
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
-  width: 80%;
-  margin: 100px;
+  align-items: center;
+  padding: 24px;
+  background: #e8faf2;
 }
 
 .signup-card {
-  justify-content: center;
-  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  /* align-items: center; */
+}
+.signup-form-button {
+  width: 50%;
+}
+
+@media (max-width: 576px) {
+  .signup-container {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .signup-card {
+    max-width: 100%;
+  }
+
+  /* ::ng-deep .ant-form-item-label {
+    text-align: left !important;
+  } */
 }
